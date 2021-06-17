@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
 
-$grad1: rgba(255, 255, 255, 0.6);
+$grad1: rgba(255, 255, 255, 0.8);
 $grad2: rgba(255, 255, 255, 0);
+$lgr: rgba(255, 255, 255, 0.6);
+$dgr: #223;
 $transition1: all 0.3 ease-in-out;
+
+
+@for $i from 1 through 5 {
+    .bg-#{$i} {
+        background: linear-gradient(90deg, $grad1, $grad2), url('./img/bg-#{$i}.jpg');
+        background-size: 150%, cover;
+        background-position: -100px 0px, center;
+    }
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -10,12 +23,13 @@ $transition1: all 0.3 ease-in-out;
 }
 
 div, section {
-    border: 1px dashed pink;
+    // border: 1px dashed pink;
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
+    color: $dgr;
 }
 
 main {
@@ -28,35 +42,47 @@ main {
 .panel {
     height: 20vh;
     flex: 1;
-
+    overflow: hidden;
     padding: 2rem;
 
     display: flex; 
     flex-direction: column;
     justify-content: center; // flex-start
     align-items: flex-start;
+    transition: flex 0.3s ease-in-out,
+                background-size 1s ease-in-out;
 
     h1 {
-        font-size: 2.5rem;
-        transition: $transition1;
+        font-size: 2.2rem;
+        padding: 2rem;
+        transition: all 0.3s ease-in-out;
     }
     section {
-        display: none;
-        transition: $transition1;
+        position: absolute;
+        transform: translateX(-200%);
+        transition: transform 0.5s ease-in-out,
     }
-}
 
-@for $i from 1 through 5 {
-    .bg-#{$i} {
-        background: linear-gradient(90deg, $grad1, $grad2), url('./img/bg-#{$i}.jpg');
-        background-size: 400%, cover;
-        background-position: center;
+    p {
+        font-size: 1.2rem;
     }
 }
 
 .open {
     flex: 5;
     justify-content: flex-start;
+    background-size: 1000%, cover;
+    background-position: center, center;
+
+    section {
+        position: relative;
+        transform: translateX(0);
+    }
+
+    h1 {
+        font-size: 2.7rem;
+        padding-left: 0;
+    }
 }
 
 
