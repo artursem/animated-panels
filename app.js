@@ -7,6 +7,7 @@ function openPanel() {
     } else {
         panels.forEach(panel => panel.classList.remove('open'));
         this.classList.add('open');
+
     }
 }
 

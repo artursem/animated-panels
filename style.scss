@@ -59,8 +59,10 @@ main {
     }
     section {
         position: absolute;
-        transform: translateX(-200%);
-        transition: transform 0.5s ease-in-out,
+        overflow: hidden;
+        visibility: hidden;
+        transform: translateY(200%);
+        transition: transform .4s ease-in-out .1s;
     }
 
     p {
@@ -75,8 +77,9 @@ main {
     background-position: center, center;
 
     section {
+        visibility: visible;
         position: relative;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     h1 {
