@@ -1,3 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
 
-// font-family: 'Roboto', sans-serif;
+$grad1: rgba(255, 255, 255, 0.6);
+$grad2: rgba(255, 255, 255, 0);
+$transition1: all 0.3 ease-in-out;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div, section {
+    border: 1px dashed pink;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.panel {
+    height: 20vh;
+    flex: 1;
+
+    padding: 2rem;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; // flex-start
+    align-items: flex-start;
+
+    h1 {
+        font-size: 2.5rem;
+        transition: $transition1;
+    }
+    section {
+        display: none;
+        transition: $transition1;
+    }
+}
+
+@for $i from 1 through 5 {
+    .bg-#{$i} {
+        background: linear-gradient(90deg, $grad1, $grad2), url('./img/bg-#{$i}.jpg');
+        background-size: 400%, cover;
+        background-position: center;
+    }
+}
+
+.open {
+    flex: 5;
+    justify-content: flex-start;
+}
+
+
+
+
+// 

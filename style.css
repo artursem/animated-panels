@@ -1,3 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div, section {
+  border: 1px dashed pink;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.panel {
+  height: 20vh;
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.panel h1 {
+  font-size: 2.5rem;
+  transition: all 0.3 ease-in-out;
+}
+.panel section {
+  display: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.bg-1 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url("./img/bg-1.jpg");
+  background-size: 400%, cover;
+  background-position: center;
+}
+
+.bg-2 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url("./img/bg-2.jpg");
+  background-size: 400%, cover;
+  background-position: center;
+}
+
+.bg-3 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url("./img/bg-3.jpg");
+  background-size: 400%, cover;
+  background-position: center;
+}
+
+.bg-4 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url("./img/bg-4.jpg");
+  background-size: 400%, cover;
+  background-position: center;
+}
+
+.bg-5 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)), url("./img/bg-5.jpg");
+  background-size: 400%, cover;
+  background-position: center;
+}
+
+.open {
+  flex: 5;
+  justify-content: flex-start;
+}
 
 /*# sourceMappingURL=style.css.map */
